@@ -12,7 +12,7 @@ class EmbedSay(commands.Cog):
         description = " ".join(args[1:-1]) if len(args) > 2 else "" 
         footer = args[-1] if len(args) > 1 else "" 
 
-        embed = discord.Embed(title=title, description=description, color=discord.Color.green())
+        embed = discord.Embed(title=title, description=description, color=0xFF01EF)
         embed.set_footer(text=footer)
         await ctx.send(embed=embed)
 
