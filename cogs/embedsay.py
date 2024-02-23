@@ -6,6 +6,7 @@ class EmbedSay(commands.Cog):
         self.bot = bot
 
     @commands.command(name="embedsay")
+    @commands.has_permissions(administrator=True)
     async def embed_say(self, ctx, *args):
         title = args[0] if args else ""  
         description = " ".join(args[1:-1]) if len(args) > 2 else "" 
