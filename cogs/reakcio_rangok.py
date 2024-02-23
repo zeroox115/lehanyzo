@@ -20,6 +20,7 @@ class ReakcioRangok(commands.Cog):
             json.dump(self.reakcio_uzenetek, f, indent=4)
 
     @commands.command(name="add")
+    @commands.has_permissions(administrator=True)
     async def add_reaction_role_to_msg(self, ctx, uzenet_id, rang: discord.Role, emoji):
         try:
             uzenet_id = int(uzenet_id)
@@ -49,6 +50,7 @@ class ReakcioRangok(commands.Cog):
 
 
     @commands.command(name="remove")
+    @commands.has_permissions(administrator=True)
     async def remove_reaction_role_to_msg(self, ctx, uzenet_id, emoji):
         try:
             uzenet_id = int(uzenet_id)
